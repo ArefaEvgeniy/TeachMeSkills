@@ -24,6 +24,8 @@ class Auto:
         print("Man, STOP!!!")
 
 
+if __name__ == '__main__':
+
 auto_1 = Auto()
 
 print(f"Brand auto --- {auto_1.brand}", f"Mark --- {auto_1.mark}", sep='\n')
