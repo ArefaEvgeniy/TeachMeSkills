@@ -12,7 +12,7 @@ from hw_01 import Auto
 import time
 
 
-class truck(Auto):
+class Truck(Auto):
     max_load = None
     trailer = None
 
@@ -32,7 +32,7 @@ class truck(Auto):
         print('...GO!')
 
 
-class car(Auto):
+class Car(Auto):
     max_speed = None
     tunning = None
     dors = None
@@ -46,7 +46,7 @@ class car(Auto):
         print(f'max speed is {Chrysler.max_speed} km/h!!!')
 
 
-Chrysler = car('Chrysler', 2005, '300C', 300, 2225, 'Black')
+Chrysler = Car('Chrysler', 2005, '300C', 300, 2225, 'Black')
 print('*' * 54)
 print(Chrysler.brand, Chrysler.mark, Chrysler.age, f'{Chrysler.max_speed} km/h', Chrysler.weight, Chrysler.color,
       sep='-|-')
@@ -56,7 +56,7 @@ print('*' * 54)
 Chrysler.stop()
 print('*' * 54)
 
-Volvo = truck('Volvo', 'F-456G', 2019, "4 long ton", "Yes", 5578, 'Yellow')
+Volvo = Truck('Volvo', 'F-456G', 2019, "4 long ton", "Yes", 5578, 'Yellow')
 print(Volvo.brand, Volvo.mark, Volvo.age, Volvo.max_load, f'(There is a trailer?) - {Volvo.trailer}', Volvo.weight,
       Volvo.color, sep='-|-')
 print('*' * 54)
