@@ -14,7 +14,7 @@ class Auto:
     mark = None
     weight = None
 
-    def __init__(self, brand, age, mark, weight, color):
+    def __init__(self, brand, age, mark, weight, color):  # так у вас все атрибуты должны быть обязательными, а в задании указаны только brand, age и mark 
         self.brand = brand
         self.age = age
         self.mark = mark
