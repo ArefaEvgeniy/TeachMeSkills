@@ -32,9 +32,9 @@ class Auto:
 
 
 if __name__ == '__main__':
-    auto_1 = Auto('Chrysler', 2005, '300C', 2225, 'black')
-    print(auto_1.brand)
-    print(auto_1.age)
-    print(auto_1.mark)
-    print(auto_1.weight)
-    print(auto_1.color)
+    Auto_1 = Auto('Chrysler', 2005, '300C', 2225, 'black')
+    print(Auto_1.brand)
+    print(Auto_1.age)
+    print(Auto_1.mark)
+    print(Auto_1.weight)
+    print(Auto_1.color)
