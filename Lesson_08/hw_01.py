@@ -25,12 +25,10 @@ class Auto:
 
 
 if __name__ == '__main__':
-
-auto_1 = Auto()
-
-print(f"Brand auto --- {auto_1.brand}", f"Mark --- {auto_1.mark}", sep='\n')
-print()
-auto_1.move()
-auto_1.stop()
-print()
-print(auto_1.birthday())
+    auto_1 = Auto()
+    print(f"Brand auto --- {auto_1.brand}", f"Mark --- {auto_1.mark}", sep='\n')
+    print()
+    auto_1.move()
+    auto_1.stop()
+    print()
+    print(auto_1.birthday())
