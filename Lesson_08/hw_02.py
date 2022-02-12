@@ -13,8 +13,13 @@ import time
 
 
 class truck(Auto):
-    max_load = "4 long ton"
-    trailer = "Yes"
+    max_load = None
+    trailer = None
+
+    def __init__(self, brand, age, mark, max_load, trailer, weight, color):
+        super().__init__(brand, age, mark, weight, color)
+        self.max_load = max_load
+        self.trailer = trailer
 
     def move(self):
         print('ATTENTION!!!')
@@ -28,27 +33,34 @@ class truck(Auto):
 
 
 class car(Auto):
-    max_speed = 200
-    tunning = "Chip"
-    dors = 2
+    max_speed = None
+    tunning = None
+    dors = None
+
+    def __init__(self, brand, age, mark, max_speed, weight, color):
+        super().__init__(brand, age, mark, weight, color)
+        self.max_speed = max_speed
 
     def move(self):
         super().move()
         print(f'max speed is {Chrysler.max_speed} km/h!!!')
 
 
-Chrysler = car()
-truck_1 = truck()
-
+Chrysler = car('Chrysler', 2005, '300C', 300, 2225, 'Black')
+print('*' * 54)
+print(Chrysler.brand, Chrysler.mark, Chrysler.age, f'{Chrysler.max_speed} km/h', Chrysler.weight, Chrysler.color,
+      sep='-|-')
+print('*' * 54)
 Chrysler.move()
-print("=" * 33)
-print(f'Tun: {Chrysler.tunning}')
-print(f'Dors: {Chrysler.dors}')
-print("=" * 33)
-truck_1.move()
-print("=" * 33)
-print(f'Load: {truck_1.max_load}')
-print(f'Is there a trailer?', f'<<<{truck_1.trailer}>>>', sep='\n')
-print("=" * 33)
-truck_1.load()
-print("=" * 34)
+print('*' * 54)
+Chrysler.stop()
+print('*' * 54)
+
+Volvo = truck('Volvo', 'F-456G', 2019, "4 long ton", "Yes", 5578, 'Yellow')
+print(Volvo.brand, Volvo.mark, Volvo.age, Volvo.max_load, f'(There is a trailer?) - {Volvo.trailer}', Volvo.weight,
+      Volvo.color, sep='-|-')
+print('*' * 54)
+Volvo.move()
+print('*' * 54)
+Volvo.load()
+print('*' * 54)
