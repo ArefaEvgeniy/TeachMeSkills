@@ -59,7 +59,7 @@ class Circle(Point):
 a = Circle(3, 1, 1)
 print(a)
 
-b = Circle(3, 5, 7)
+b = Circle(2, 5, 7)
 print(b)
 
 print(a - b)
