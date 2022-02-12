@@ -32,7 +32,7 @@ class Truck(Auto):
         print('...GO!')
 
 
-class Car(Auto):
+class car(Auto):
     max_speed = None
     tunning = None
     dors = None
@@ -46,7 +46,7 @@ class Car(Auto):
         print(f'max speed is {Chrysler.max_speed} km/h!!!')
 
 
-Chrysler = Car('Chrysler', 2005, '300C', 300, 2225, 'Black')
+Chrysler = car('Chrysler', 2005, '300C', 300, 2225, 'Black')
 print('*' * 54)
 print(Chrysler.brand, Chrysler.mark, Chrysler.age, f'{Chrysler.max_speed} km/h', Chrysler.weight, Chrysler.color,
       sep='-|-')
