@@ -10,32 +10,31 @@ import math
 class Auto:
     brand = None
     age = None
-    color = None
+    color = 'Black'
     mark = None
-    weight = None
+    weight = 2225
 
-    def __init__(self, brand, age, mark, weight, color):
+    def __init__(self, brand, mark, age):
         self.brand = brand
         self.age = age
         self.mark = mark
-        self.color = color
-        self.weight = weight
 
     def move(self):
         print("MOVE, Man!!!")
 
     def birthday(self):
         self.age += 1
+        return self.age
 
     def stop(self):
         print("Man, STOP!!!")
 
 
 if __name__ == '__main__':
-    Auto_1 = Auto('Chrysler', 2005, '300C', 2225, 'black')
+    Auto_1 = Auto('Chrysler', '300C', 2005)
     print(Auto_1.brand)
     print('*' * 54)
-    print(Auto_1.age)
+    print(Auto_1.birthday())
     print('*' * 54)
     print(Auto_1.mark)
     print('*' * 54)
