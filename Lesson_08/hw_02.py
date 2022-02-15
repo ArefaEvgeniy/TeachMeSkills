@@ -16,8 +16,8 @@ class Truck(Auto):
     max_load = None
     trailer = None
 
-    def __init__(self, brand, age, mark, max_load, trailer, weight, color):
-        super().__init__(brand, age, mark, weight, color)
+    def __init__(self, brand, age, mark, max_load, trailer):
+        super().__init__(brand, age, mark)
         self.max_load = max_load
         self.trailer = trailer
 
@@ -37,8 +37,8 @@ class car(Auto):
     tunning = None
     dors = None
 
-    def __init__(self, brand, age, mark, max_speed, weight, color):
-        super().__init__(brand, age, mark, weight, color)
+    def __init__(self, brand, age, mark, max_speed):
+        super().__init__(brand, age, mark)
         self.max_speed = max_speed
 
     def move(self):
@@ -46,19 +46,18 @@ class car(Auto):
         print(f'max speed is {Chrysler.max_speed} km/h!!!')
 
 
-Chrysler = car('Chrysler', 2005, '300C', 300, 2225, 'Black')
+Chrysler = car('Chrysler', 2005, '300C', 300)
 print('*' * 54)
-print(Chrysler.brand, Chrysler.mark, Chrysler.age, f'{Chrysler.max_speed} km/h', Chrysler.weight, Chrysler.color,
-      sep='-|-')
+print(Chrysler.brand, Chrysler.mark, Chrysler.age, f'{Chrysler.max_speed} km/h', sep='-|-', end='| \n')
 print('*' * 54)
 Chrysler.move()
 print('*' * 54)
 Chrysler.stop()
 print('*' * 54)
 
-Volvo = Truck('Volvo', 'F-456G', 2019, "4 long ton", "Yes", 5578, 'Yellow')
-print(Volvo.brand, Volvo.mark, Volvo.age, Volvo.max_load, f'(There is a trailer?) - {Volvo.trailer}', Volvo.weight,
-      Volvo.color, sep='-|-')
+Volvo = Truck('Volvo', 'F-456G', 2019, "4 long ton", "Yes")
+print(Volvo.brand, Volvo.mark, Volvo.age, Volvo.max_load, f'(There is a trailer?) - {Volvo.trailer}', sep='-|-',
+      end='| \n')
 print('*' * 54)
 Volvo.move()
 print('*' * 54)
